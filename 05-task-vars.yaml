@@ -10,5 +10,5 @@
     vars:
       course: devops
     - name: print course info.
-        ansible.builtin.debug:
-          msg: "course is: {{course}}, duration: {{duration}}, trainer: {{trainer}}"
+      ansible.builtin.debug:
+        msg: "course is: {{course}}, duration: {{duration}}, trainer: {{trainer}}"
