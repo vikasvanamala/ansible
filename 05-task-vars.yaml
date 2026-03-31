@@ -7,8 +7,8 @@
     trainer: shiva
 
   tasks:
-    vars:
-      course: devops
-    - name: print course info.
-      ansible.builtin.debug:
-        msg: "course is: {{course}}, duration: {{duration}}, trainer: {{trainer}}"
+  - name: print course info.
+  vars:
+    course: devops
+  ansible.builtin.debug:
+      msg: "course is: {{course}}, duration: {{duration}}, trainer: {{trainer}}"
