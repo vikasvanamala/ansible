@@ -14,7 +14,7 @@
     listtags:
     - key: environment
       value: dev
-    -key: application
+    - key: application
       value: payment
 
     tasks:
