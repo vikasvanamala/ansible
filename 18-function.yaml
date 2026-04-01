@@ -3,7 +3,7 @@
   connection: local
   vars:
     technologies: linux, ansible, devops #string
-  #  name: 
+    name: "vikas" 
     gmail: "info@gmail.com"
     ipaddress: "192.12.3.1"
     # dictionary
@@ -20,21 +20,21 @@
   tasks:
   - name: default variables
     ansible.builtin.debug:
-      msg: "hello {{ name | default('ramesh') }}"
+      msg: "hello, {{ name | default('ramesh') }}"
 
-    # # string to list
-    # - name: string to list
-    #   ansible.builtin.debug:
-    #     msg: "technologies are: {{ technologies | spilt (',') }}"
-
+    #string to list
+  - name: string to list
+      ansible.builtin.debug:
+        msg: "technologies are: {{ technologies | spilt (',') }}"
+  
     
-    # - name: map to list
-    #   ansible.builtin.debug:
-    #     msg: "tags are: {{ tags | dict2items }}"
+  - name: map to list
+    ansible.builtin.debug:
+      msg: "tags are: {{ tags | dict2items }}"
     
-    # - name: list to map
-    #   ansible.builtin.debug:
-    #     msg: "tag maps: {{ listatgs | items2dict }}"
+  - name: list to map
+    ansible.builtin.debug:
+      msg: "tag maps: {{ listatgs | items2dict }}"  
 
     # - name: read yaml and take it into variable
     #   ansible.builtin.set_fact:
