@@ -42,7 +42,8 @@
 
     - name: convert yaml into json
       ansible.builtin.set_fact:
-      
+        msg: "{{student.yaml | student.json}}"
+
 
 
           
