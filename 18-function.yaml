@@ -3,7 +3,7 @@
   connection: local
   vars:
     technologies: linux, ansible, devops #string
-    name: 
+  #  name: 
     gmail: "info@gmail.com"
     ipaddress: "192.12.3.1"
     # dictionary
