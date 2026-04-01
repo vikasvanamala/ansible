@@ -1,0 +1,21 @@
+- name: datatypes
+  hosts: local
+  connection: local
+  vars: 
+    course: devops #string
+    duration: 10   #number
+    islive: true   #boolean
+    
+    tools:         #list
+    - linux
+    - java
+    - html
+
+    concepts:      #map/ dictionary
+      cloud: aws
+      cm: ansible
+
+  tasks:
+  - name: "datatypes in ansible"
+    ansible.builtin.debug:
+      msg: "course: {{course}}, duratiion: {{duration}}, isitlive?: {{islive}}, tools: {{tools}}, concepts:{{concepts}}"

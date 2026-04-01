@@ -1,0 +1,14 @@
+- name: install packages from maps
+  hosts: local
+  connection: local
+  tasks:
+  - name: install and uninstall packages
+    ansible.builtin.package:
+      name: "{{item.name}}"
+      state: "{{item.state}}"
+
+    loop:
+    - {name: "mginx", state: "absent"}
+    - {name: "redis", state: "latest"}
+    - {name: "mysql", state: "absent"}
+    

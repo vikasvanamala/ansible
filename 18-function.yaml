@@ -1,0 +1,48 @@
+- name: functions or filters
+  hosts: local
+  connection: local
+  vars:
+    technologies: linux, ansible, devops #string
+    name: "vikas"
+    gmail: "info@gmail.com"
+    ipaddress: "192.12.3.1"
+    # dictionary
+    tags:
+     application: payment
+     environment: dev
+    #lists
+    listtags:
+    - key: environment
+      value: dev
+    -key: application
+      value: payment
+
+    tasks:
+    - name: default variables
+      ansible.builtin.debug:
+        msg: "hello {{ name | default('ramesh') }}"
+
+    # string to list
+    - name: string to list
+      ansible.builtin.debug:
+        msg: "technologies are: {{ technologies | spilt (',') }}"
+
+    
+    - name: map to list
+      ansible.builtin.debug:
+        msg: "tags are: {{ tags | dict2items }}"
+    
+    - name: list to map
+      ansible.builtin.debug:
+        msg: "tag maps: {{ listatgs | items2dict }}"
+
+    - name: read yaml and take it into variable
+      ansible.builtin.set_fact:
+        student.yaml: "{{ lookup('file' 'student.yaml') | from_yaml }}"
+
+    - name: convert yaml into json
+      ansible.builtin.set_fact:
+      
+
+
+          
