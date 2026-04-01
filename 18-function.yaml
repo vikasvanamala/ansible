@@ -64,7 +64,7 @@
 
   - name: grep root
     ansible.builtin.shell: cat /etc/passwd | grep repo
-      register: command_output
+    register: command_output
 
   - name: print the command command_output
     ansible.builtin.debug:
