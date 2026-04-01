@@ -24,8 +24,8 @@
 
     #string to list
   - name: string to list
-      ansible.builtin.debug:
-        msg: "technologies are: {{ technologies | spilt (',') }}"
+    ansible.builtin.debug:
+      msg: "technologies are: {{ technologies | spilt (',') }}"
   
     
   - name: map to list
