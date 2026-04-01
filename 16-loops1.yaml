@@ -1,6 +1,7 @@
 - name: install packages from maps
   hosts: local
   connection: local
+  become: yes
   tasks:
   - name: install and uninstall packages
     ansible.builtin.package:
