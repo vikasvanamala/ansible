@@ -4,8 +4,8 @@
   become: yes
   vars:
     technologies: linux, ansible, devops #string
-    name: "vikas" 
-    gmail: "info@gmail.com"
+    name: "vikaS" 
+    gmail: "iNFOo@gmail.com"
     ipaddress: "192.12.3.1"
     # dictionary
     tags:
@@ -49,5 +49,13 @@
     ansible.builtin.copy:
       dest: ./student-data.json
       content: "{{ student_yaml | to_nice_json }}"
+
+  - name: convert upper case
+    ansible.builtin.debug:
+      msg: "{{ gmail | lower}}"
+
+  - name: convert upper case
+    ansible.builtin.debug:
+      msg: "{{ name | upper}}"
 
           
