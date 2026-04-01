@@ -64,7 +64,7 @@
     ignore_errors: true
 
   - name: grep root
-    ansible.builtin.shell: cat /etc/passwd | grep repo
+    ansible.builtin.shell: cat /etc/passwd | grep root
     register: command_output
 
   - name: print the command command_output
