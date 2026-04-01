@@ -34,7 +34,7 @@
     
   - name: list to map
     ansible.builtin.debug:
-      msg: "tag maps: {{ listatgs | items2dict }}"  
+      msg: "tag maps: {{ listtags | items2dict }}"  
 
     # - name: read yaml and take it into variable
     #   ansible.builtin.set_fact:
