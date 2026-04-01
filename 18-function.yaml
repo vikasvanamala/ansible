@@ -1,6 +1,7 @@
 - name: functions or filters
   hosts: local
   connection: local
+  become: yes
   vars:
     technologies: linux, ansible, devops #string
     name: "vikas" 
@@ -47,6 +48,6 @@
   - name: save json to file
     ansible.builtin.copy:
       dest: ./student-data.json
-      content: "{{ student_yaml | to_nice_json }}
+      content: "{{ student_yaml | to_nice_json }}"
 
           
