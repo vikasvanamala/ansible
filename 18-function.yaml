@@ -3,7 +3,7 @@
   connection: local
   vars:
     technologies: linux, ansible, devops #string
-    name: "vikas"
+    name: 
     gmail: "info@gmail.com"
     ipaddress: "192.12.3.1"
     # dictionary
@@ -17,10 +17,10 @@
     - key: application
       value: payment
 
-    tasks:
-    - name: default variables
-      ansible.builtin.debug:
-        msg: "hello {{ name | default('ramesh') }}"
+  tasks:
+  - name: default variables
+    ansible.builtin.debug:
+      msg: "hello {{ name | default('ramesh') }}"
 
     # # string to list
     # - name: string to list
